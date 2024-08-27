@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <h2 id="label">Fruits</h2>
+
+    <script src="demo1.js"></script>
+    <script>
+      let names = ["Apple", "Banana", "Kivi", "Orange"];
+      let cindex = 0;
+      function name() {
+        const outputElement = document.getElementById("label");
+
+        if (cindex < names.length) {
+          outputElement.innerText = names[cindex];
+          cindex++;
+        } else {
+          outputElement.innerText = "Array End";
+          cindex = 0;
+        }
+      }
+      document.getElementById("label").addEventListener("click", name);
+    </script>
+  </body>
+</html>
